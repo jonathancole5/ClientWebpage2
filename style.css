@@ -25,13 +25,14 @@ body {
   cursor: pointer;
   float: left;
   width: calc(100% - 2px / 3);
-  font: bold 2.9vmin 'Inknut Antiqua';
+  font: bold 2.9vmin 'Inknut Antiqua'
 }
-.tb .button:not(:last-child) {border-right: none}
 
-.tb .button:active {background-color: #1A1A1A}
+.tb .button:not(:last-child) {border-right: none} /* This prevents a double border between the center buttons in the .tb div */
 
-button:focus {outline:0;}
+.tb .button:active {background: #1A1A1A} /* This changes the background color specifically for the any buttons in the .tb class when thy are pressed */
+
+button:focus {outline:0} /* This is simply to hide the blue border the broswer applies when slecting an element */
 
 .mid {
   display: flex;
@@ -41,7 +42,7 @@ button:focus {outline:0;}
 
 .ml {
   height: 100%;
-  width: 50%;
+  width: 50%
 }
 
 .mr {
@@ -74,35 +75,33 @@ button:focus {outline:0;}
   padding: 0 5px 0px 5px
 }
 
-.mlr p {margin:auto}
+.mlr p {margin: auto}
 
-.big{display:flex}
+.big {display: flex}
 
-.nbig {display:none}
+.nbig {display: none}
 
-.shad {text-shadow:1.25px 0px black}
+.shad {text-shadow: 1.25px 0px black}
 
-.outline{ 
+.outline { 
   text-shadow: 
     1.25px 0px #000000,
     0px 1.25px #000000,
     -1.25px 0px #000000,
     0px -1.25px #000000
-}
+} /*I used mutiple text-shadow properties to emulate outlined text.*/
 
-.shadow{box-shadow:-5px 10px 2.5px rgba(0,0,0,0.5)}
+.g-img {content: url("images/green.png")}
 
-.g-img{content: url("images/green.png")}
+.r-img {content: url("images/red.png")}
 
-.r-img{content: url("images/red.png")}
+.blue-img {content: url("images/blue.png")}
 
-.blue-img{content: url("images/blue.png")}
+.black-img {content: url("images/black.png")}
 
-.black-img{content: url("images/black.png")}
+.t-img {content: url("images/tiamat.jpg")}
 
-.t-img{content: url("images/tiamat.jpg")}
-
-.w-img{content: url("images/white.png")}
+.w-img {content: url("images/white.png")}
 
 .cent-img{
   display: flex;
@@ -119,35 +118,35 @@ button:focus {outline:0;}
 /* width */
 ::-webkit-scrollbar {
   width: 5px;
-  border-radius:100px;
+  border-radius: 100px
 }
 
 /* Track */
 ::-webkit-scrollbar-track {
   background: rgba(70,70,70,0.3);
-  border-radius:100px;
+  border-radius: 100px
 }
 
 /* Handle */
 ::-webkit-scrollbar-thumb {
   background: rgba(40,40,40,0.75);
-  border-radius:100px;
+  border-radius: 100px
 }
 
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
   background: rgba(40,40,40,1);
-  border-radius:100px;
+  border-radius: 100px
 }
 
-@media only screen and (max-width:600px){
-	.mid{display:block;}
+@media only screen and (max-width: 600px){
+	.mid {display: block}
 	
 	.mlr {font-size: 16px}
 	
-	.big{display: none}
+	.big {display: none}
 	
-	.nbig{display: block}
+	.nbig {display: block}
 	
 	.ml {
 		width: 100%;
@@ -156,18 +155,18 @@ button:focus {outline:0;}
 	
 	.mr {
 		padding: 5% 5%;
-		margin:0;
+		margin: 0;
 		height: calc(50% - 10%);
 		width: calc(100% - 10%);
 		border-left: 0;
 		border-top: 2px solid black
 	}
 	
-	.mur{font-size:5vmin}
+	.mur {font-size: 5vmin} /* I used vmin here instead of vw/vh because the font was inconsistantly sized when using those values*/
 	
-	.mid {height: 90%;}
+	.mid {height: 90%}
 	
-	.tb { height: 10%;}
+	.tb {height: 10%}
 	
 	.tb .button{
 	  width: calc(100%/6);
